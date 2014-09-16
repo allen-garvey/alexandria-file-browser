@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6467FDE319AB85C90057212B /* AGEDAlexandriaPreferencesWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6467FDE219AB85C90057212B /* AGEDAlexandriaPreferencesWindow.m */; };
+		6467FDE619AB879A0057212B /* AGEDPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6467FDE519AB879A0057212B /* AGEDPreferencesWindowController.m */; };
+		647B70AD1992466D007162AF /* AGEDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 647B70AC1992466D007162AF /* AGEDTableView.m */; };
+		647FD88B1986A51F00927D0B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647FD88A1986A51F00927D0B /* Cocoa.framework */; };
+		647FD8951986A51F00927D0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 647FD8931986A51F00927D0B /* InfoPlist.strings */; };
+		647FD8971986A51F00927D0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8961986A51F00927D0B /* main.m */; };
+		647FD89B1986A51F00927D0B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 647FD8991986A51F00927D0B /* Credits.rtf */; };
+		647FD89E1986A51F00927D0B /* AGEDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD89D1986A51F00927D0B /* AGEDAppDelegate.m */; };
+		647FD8A11986A51F00927D0B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 647FD89F1986A51F00927D0B /* MainMenu.xib */; };
+		647FD8A31986A51F00927D0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 647FD8A21986A51F00927D0B /* Images.xcassets */; };
+		647FD8AA1986A51F00927D0B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647FD8A91986A51F00927D0B /* XCTest.framework */; };
+		647FD8AB1986A51F00927D0B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647FD88A1986A51F00927D0B /* Cocoa.framework */; };
+		647FD8B31986A51F00927D0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 647FD8B11986A51F00927D0B /* InfoPlist.strings */; };
+		647FD8B51986A51F00927D0B /* AlexandriaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8B41986A51F00927D0B /* AlexandriaTests.m */; };
+		647FD8CA1986A6E900927D0B /* AGEDAlexandriaTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8BF1986A6E900927D0B /* AGEDAlexandriaTest.m */; };
+		647FD8CB1986A6E900927D0B /* AGEDAlexandriaUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8C11986A6E900927D0B /* AGEDAlexandriaUtil.m */; };
+		647FD8CC1986A6E900927D0B /* AGEDFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8C31986A6E900927D0B /* AGEDFile.m */; };
+		647FD8CD1986A6E900927D0B /* AGEDFileCategorySorter.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8C51986A6E900927D0B /* AGEDFileCategorySorter.m */; };
+		647FD8CE1986A6E900927D0B /* AGEDFileCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8C71986A6E900927D0B /* AGEDFileCollection.m */; };
+		647FD8CF1986A6E900927D0B /* AGEDRegExMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8C91986A6E900927D0B /* AGEDRegExMatcher.m */; };
+		647FD8D21986A74800927D0B /* AGEDFileTabViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8D11986A74800927D0B /* AGEDFileTabViewItem.m */; };
+		647FD8D51986A79C00927D0B /* AGEDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8D41986A79C00927D0B /* AGEDTableViewController.m */; };
+		647FD8D81986AD6800927D0B /* AGEDFileTabViewItem2.m in Sources */ = {isa = PBXBuildFile; fileRef = 647FD8D71986AD6800927D0B /* AGEDFileTabViewItem2.m */; };
+		64F5B0FB1996956F0045A785 /* AGEDFileRenamePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F5B0FA1996956F0045A785 /* AGEDFileRenamePanel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		647FD8AC1986A51F00927D0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 647FD87F1986A51F00927D0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 647FD8861986A51F00927D0B;
+			remoteInfo = Alexandria;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6467FDE119AB85C90057212B /* AGEDAlexandriaPreferencesWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDAlexandriaPreferencesWindow.h; sourceTree = "<group>"; };
+		6467FDE219AB85C90057212B /* AGEDAlexandriaPreferencesWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDAlexandriaPreferencesWindow.m; sourceTree = "<group>"; };
+		6467FDE419AB879A0057212B /* AGEDPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDPreferencesWindowController.h; sourceTree = "<group>"; };
+		6467FDE519AB879A0057212B /* AGEDPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDPreferencesWindowController.m; sourceTree = "<group>"; };
+		647B70AB1992466D007162AF /* AGEDTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDTableView.h; sourceTree = "<group>"; };
+		647B70AC1992466D007162AF /* AGEDTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDTableView.m; sourceTree = "<group>"; };
+		647FD8871986A51F00927D0B /* Alexandria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alexandria.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		647FD88A1986A51F00927D0B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		647FD88D1986A51F00927D0B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		647FD88E1986A51F00927D0B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		647FD88F1986A51F00927D0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		647FD8921986A51F00927D0B /* Alexandria-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Alexandria-Info.plist"; sourceTree = "<group>"; };
+		647FD8941986A51F00927D0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		647FD8961986A51F00927D0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		647FD8981986A51F00927D0B /* Alexandria-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alexandria-Prefix.pch"; sourceTree = "<group>"; };
+		647FD89A1986A51F00927D0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		647FD89C1986A51F00927D0B /* AGEDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGEDAppDelegate.h; sourceTree = "<group>"; };
+		647FD89D1986A51F00927D0B /* AGEDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGEDAppDelegate.m; sourceTree = "<group>"; };
+		647FD8A01986A51F00927D0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		647FD8A21986A51F00927D0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		647FD8A81986A51F00927D0B /* AlexandriaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlexandriaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		647FD8A91986A51F00927D0B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		647FD8B01986A51F00927D0B /* AlexandriaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlexandriaTests-Info.plist"; sourceTree = "<group>"; };
+		647FD8B21986A51F00927D0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		647FD8B41986A51F00927D0B /* AlexandriaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlexandriaTests.m; sourceTree = "<group>"; };
+		647FD8BE1986A6E900927D0B /* AGEDAlexandriaTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDAlexandriaTest.h; sourceTree = "<group>"; };
+		647FD8BF1986A6E900927D0B /* AGEDAlexandriaTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDAlexandriaTest.m; sourceTree = "<group>"; };
+		647FD8C01986A6E900927D0B /* AGEDAlexandriaUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDAlexandriaUtil.h; sourceTree = "<group>"; };
+		647FD8C11986A6E900927D0B /* AGEDAlexandriaUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDAlexandriaUtil.m; sourceTree = "<group>"; };
+		647FD8C21986A6E900927D0B /* AGEDFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDFile.h; sourceTree = "<group>"; };
+		647FD8C31986A6E900927D0B /* AGEDFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDFile.m; sourceTree = "<group>"; };
+		647FD8C41986A6E900927D0B /* AGEDFileCategorySorter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDFileCategorySorter.h; sourceTree = "<group>"; };
+		647FD8C51986A6E900927D0B /* AGEDFileCategorySorter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDFileCategorySorter.m; sourceTree = "<group>"; };
+		647FD8C61986A6E900927D0B /* AGEDFileCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDFileCollection.h; sourceTree = "<group>"; };
+		647FD8C71986A6E900927D0B /* AGEDFileCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDFileCollection.m; sourceTree = "<group>"; };
+		647FD8C81986A6E900927D0B /* AGEDRegExMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDRegExMatcher.h; sourceTree = "<group>"; };
+		647FD8C91986A6E900927D0B /* AGEDRegExMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDRegExMatcher.m; sourceTree = "<group>"; };
+		647FD8D01986A74800927D0B /* AGEDFileTabViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDFileTabViewItem.h; sourceTree = "<group>"; };
+		647FD8D11986A74800927D0B /* AGEDFileTabViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDFileTabViewItem.m; sourceTree = "<group>"; };
+		647FD8D31986A79C00927D0B /* AGEDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDTableViewController.h; sourceTree = "<group>"; };
+		647FD8D41986A79C00927D0B /* AGEDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDTableViewController.m; sourceTree = "<group>"; };
+		647FD8D61986AD6800927D0B /* AGEDFileTabViewItem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDFileTabViewItem2.h; sourceTree = "<group>"; };
+		647FD8D71986AD6800927D0B /* AGEDFileTabViewItem2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDFileTabViewItem2.m; sourceTree = "<group>"; };
+		64F5B0F91996956F0045A785 /* AGEDFileRenamePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEDFileRenamePanel.h; sourceTree = "<group>"; };
+		64F5B0FA1996956F0045A785 /* AGEDFileRenamePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEDFileRenamePanel.m; sourceTree = "<group>"; };
+		64FF9B261987144100C9DEA4 /* Alexandria.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Alexandria.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		647FD8841986A51F00927D0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				647FD88B1986A51F00927D0B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		647FD8A51986A51F00927D0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				647FD8AB1986A51F00927D0B /* Cocoa.framework in Frameworks */,
+				647FD8AA1986A51F00927D0B /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		647FD87E1986A51F00927D0B = {
+			isa = PBXGroup;
+			children = (
+				647FD8901986A51F00927D0B /* Alexandria */,
+				647FD8AE1986A51F00927D0B /* AlexandriaTests */,
+				647FD8891986A51F00927D0B /* Frameworks */,
+				647FD8881986A51F00927D0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		647FD8881986A51F00927D0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				647FD8871986A51F00927D0B /* Alexandria.app */,
+				647FD8A81986A51F00927D0B /* AlexandriaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		647FD8891986A51F00927D0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				647FD88A1986A51F00927D0B /* Cocoa.framework */,
+				647FD8A91986A51F00927D0B /* XCTest.framework */,
+				647FD88C1986A51F00927D0B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		647FD88C1986A51F00927D0B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				647FD88D1986A51F00927D0B /* AppKit.framework */,
+				647FD88E1986A51F00927D0B /* CoreData.framework */,
+				647FD88F1986A51F00927D0B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		647FD8901986A51F00927D0B /* Alexandria */ = {
+			isa = PBXGroup;
+			children = (
+				64FF9B261987144100C9DEA4 /* Alexandria.entitlements */,
+				647FD89C1986A51F00927D0B /* AGEDAppDelegate.h */,
+				647FD89D1986A51F00927D0B /* AGEDAppDelegate.m */,
+				647FD8BE1986A6E900927D0B /* AGEDAlexandriaTest.h */,
+				647FD8BF1986A6E900927D0B /* AGEDAlexandriaTest.m */,
+				647B70AB1992466D007162AF /* AGEDTableView.h */,
+				647B70AC1992466D007162AF /* AGEDTableView.m */,
+				647FD8D61986AD6800927D0B /* AGEDFileTabViewItem2.h */,
+				647FD8D71986AD6800927D0B /* AGEDFileTabViewItem2.m */,
+				64F5B0F91996956F0045A785 /* AGEDFileRenamePanel.h */,
+				64F5B0FA1996956F0045A785 /* AGEDFileRenamePanel.m */,
+				6467FDE119AB85C90057212B /* AGEDAlexandriaPreferencesWindow.h */,
+				6467FDE219AB85C90057212B /* AGEDAlexandriaPreferencesWindow.m */,
+				6467FDE419AB879A0057212B /* AGEDPreferencesWindowController.h */,
+				6467FDE519AB879A0057212B /* AGEDPreferencesWindowController.m */,
+				647FD8D31986A79C00927D0B /* AGEDTableViewController.h */,
+				647FD8D41986A79C00927D0B /* AGEDTableViewController.m */,
+				647FD8C01986A6E900927D0B /* AGEDAlexandriaUtil.h */,
+				647FD8C11986A6E900927D0B /* AGEDAlexandriaUtil.m */,
+				647FD8C21986A6E900927D0B /* AGEDFile.h */,
+				647FD8C31986A6E900927D0B /* AGEDFile.m */,
+				647FD8C41986A6E900927D0B /* AGEDFileCategorySorter.h */,
+				647FD8C51986A6E900927D0B /* AGEDFileCategorySorter.m */,
+				647FD8C61986A6E900927D0B /* AGEDFileCollection.h */,
+				647FD8C71986A6E900927D0B /* AGEDFileCollection.m */,
+				647FD8C81986A6E900927D0B /* AGEDRegExMatcher.h */,
+				647FD8C91986A6E900927D0B /* AGEDRegExMatcher.m */,
+				647FD89F1986A51F00927D0B /* MainMenu.xib */,
+				647FD8A21986A51F00927D0B /* Images.xcassets */,
+				647FD8D01986A74800927D0B /* AGEDFileTabViewItem.h */,
+				647FD8D11986A74800927D0B /* AGEDFileTabViewItem.m */,
+				647FD8911986A51F00927D0B /* Supporting Files */,
+			);
+			path = Alexandria;
+			sourceTree = "<group>";
+		};
+		647FD8911986A51F00927D0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				647FD8921986A51F00927D0B /* Alexandria-Info.plist */,
+				647FD8931986A51F00927D0B /* InfoPlist.strings */,
+				647FD8961986A51F00927D0B /* main.m */,
+				647FD8981986A51F00927D0B /* Alexandria-Prefix.pch */,
+				647FD8991986A51F00927D0B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		647FD8AE1986A51F00927D0B /* AlexandriaTests */ = {
+			isa = PBXGroup;
+			children = (
+				647FD8B41986A51F00927D0B /* AlexandriaTests.m */,
+				647FD8AF1986A51F00927D0B /* Supporting Files */,
+			);
+			path = AlexandriaTests;
+			sourceTree = "<group>";
+		};
+		647FD8AF1986A51F00927D0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				647FD8B01986A51F00927D0B /* AlexandriaTests-Info.plist */,
+				647FD8B11986A51F00927D0B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		647FD8861986A51F00927D0B /* Alexandria */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 647FD8B81986A51F00927D0B /* Build configuration list for PBXNativeTarget "Alexandria" */;
+			buildPhases = (
+				647FD8831986A51F00927D0B /* Sources */,
+				647FD8841986A51F00927D0B /* Frameworks */,
+				647FD8851986A51F00927D0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alexandria;
+			productName = Alexandria;
+			productReference = 647FD8871986A51F00927D0B /* Alexandria.app */;
+			productType = "com.apple.product-type.application";
+		};
+		647FD8A71986A51F00927D0B /* AlexandriaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 647FD8BB1986A51F00927D0B /* Build configuration list for PBXNativeTarget "AlexandriaTests" */;
+			buildPhases = (
+				647FD8A41986A51F00927D0B /* Sources */,
+				647FD8A51986A51F00927D0B /* Frameworks */,
+				647FD8A61986A51F00927D0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				647FD8AD1986A51F00927D0B /* PBXTargetDependency */,
+			);
+			name = AlexandriaTests;
+			productName = AlexandriaTests;
+			productReference = 647FD8A81986A51F00927D0B /* AlexandriaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		647FD87F1986A51F00927D0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AGED;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___ALLENGARVEY___";
+				TargetAttributes = {
+					647FD8861986A51F00927D0B = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					647FD8A71986A51F00927D0B = {
+						TestTargetID = 647FD8861986A51F00927D0B;
+					};
+				};
+			};
+			buildConfigurationList = 647FD8821986A51F00927D0B /* Build configuration list for PBXProject "Alexandria" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 647FD87E1986A51F00927D0B;
+			productRefGroup = 647FD8881986A51F00927D0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				647FD8861986A51F00927D0B /* Alexandria */,
+				647FD8A71986A51F00927D0B /* AlexandriaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		647FD8851986A51F00927D0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				647FD8951986A51F00927D0B /* InfoPlist.strings in Resources */,
+				647FD8A31986A51F00927D0B /* Images.xcassets in Resources */,
+				647FD89B1986A51F00927D0B /* Credits.rtf in Resources */,
+				647FD8A11986A51F00927D0B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		647FD8A61986A51F00927D0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				647FD8B31986A51F00927D0B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		647FD8831986A51F00927D0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6467FDE319AB85C90057212B /* AGEDAlexandriaPreferencesWindow.m in Sources */,
+				647FD8D81986AD6800927D0B /* AGEDFileTabViewItem2.m in Sources */,
+				647FD8D21986A74800927D0B /* AGEDFileTabViewItem.m in Sources */,
+				647FD8CA1986A6E900927D0B /* AGEDAlexandriaTest.m in Sources */,
+				64F5B0FB1996956F0045A785 /* AGEDFileRenamePanel.m in Sources */,
+				647FD8CE1986A6E900927D0B /* AGEDFileCollection.m in Sources */,
+				647FD8CC1986A6E900927D0B /* AGEDFile.m in Sources */,
+				647FD8D51986A79C00927D0B /* AGEDTableViewController.m in Sources */,
+				647FD8971986A51F00927D0B /* main.m in Sources */,
+				647FD89E1986A51F00927D0B /* AGEDAppDelegate.m in Sources */,
+				6467FDE619AB879A0057212B /* AGEDPreferencesWindowController.m in Sources */,
+				647FD8CF1986A6E900927D0B /* AGEDRegExMatcher.m in Sources */,
+				647FD8CB1986A6E900927D0B /* AGEDAlexandriaUtil.m in Sources */,
+				647B70AD1992466D007162AF /* AGEDTableView.m in Sources */,
+				647FD8CD1986A6E900927D0B /* AGEDFileCategorySorter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		647FD8A41986A51F00927D0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				647FD8B51986A51F00927D0B /* AlexandriaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		647FD8AD1986A51F00927D0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 647FD8861986A51F00927D0B /* Alexandria */;
+			targetProxy = 647FD8AC1986A51F00927D0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		647FD8931986A51F00927D0B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				647FD8941986A51F00927D0B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		647FD8991986A51F00927D0B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				647FD89A1986A51F00927D0B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		647FD89F1986A51F00927D0B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				647FD8A01986A51F00927D0B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		647FD8B11986A51F00927D0B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				647FD8B21986A51F00927D0B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		647FD8B61986A51F00927D0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		647FD8B71986A51F00927D0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		647FD8B91986A51F00927D0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Alexandria/Alexandria-Prefix.pch";
+				INFOPLIST_FILE = "Alexandria/Alexandria-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		647FD8BA1986A51F00927D0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Alexandria/Alexandria-Prefix.pch";
+				INFOPLIST_FILE = "Alexandria/Alexandria-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		647FD8BC1986A51F00927D0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Alexandria.app/Contents/MacOS/Alexandria";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Alexandria/Alexandria-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AlexandriaTests/AlexandriaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		647FD8BD1986A51F00927D0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Alexandria.app/Contents/MacOS/Alexandria";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Alexandria/Alexandria-Prefix.pch";
+				INFOPLIST_FILE = "AlexandriaTests/AlexandriaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		647FD8821986A51F00927D0B /* Build configuration list for PBXProject "Alexandria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				647FD8B61986A51F00927D0B /* Debug */,
+				647FD8B71986A51F00927D0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		647FD8B81986A51F00927D0B /* Build configuration list for PBXNativeTarget "Alexandria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				647FD8B91986A51F00927D0B /* Debug */,
+				647FD8BA1986A51F00927D0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		647FD8BB1986A51F00927D0B /* Build configuration list for PBXNativeTarget "AlexandriaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				647FD8BC1986A51F00927D0B /* Debug */,
+				647FD8BD1986A51F00927D0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 647FD87F1986A51F00927D0B /* Project object */;
+}

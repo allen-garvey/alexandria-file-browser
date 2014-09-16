@@ -1,0 +1,68 @@
+{
+  "images" : [
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "Alexandria App Icon tiny.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "Alexandria App Icon small-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "Alexandria App Icon small.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "Alexandria App Icon med small.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "Alexandria App Icon medium.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "Alexandria App Icon large-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "Alexandria App Icon large.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "Alexandria App Icon super large.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "Alexandria App Icon super large-1.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "Alexandria App Icon huge.png",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

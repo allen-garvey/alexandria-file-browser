@@ -1,0 +1,20 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#import "AGEDFile.h"
+	#import "AGEDRegExMatcher.h"
+	#import "AGEDFileCategorySorter.h"
+	#import "AGEDFileCollection.h"
+	#import "AGEDAlexandriaUtil.h"
+	#import "AGEDTableView.h"
+	#import "AGEDFileTabViewItem2.h"
+	#import "AGEDTableViewController.h"
+	#import "AGEDAppDelegate.h"
+	#import "AGEDAlexandriaPreferencesWindow.h"
+	#import "AGEDPreferencesWindowController.h"
+#endif
