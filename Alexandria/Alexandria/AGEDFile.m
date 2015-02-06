@@ -14,6 +14,7 @@
 {
 	_filename = filename;
 	_title = [_filename stringByDeletingPathExtension];
+	_extension = [_filename pathExtension];
 }
 
 -(NSString *)fullFileName
@@ -73,5 +74,7 @@
 {
 	return [[self title] hash];
 }
+
+
 
 @end

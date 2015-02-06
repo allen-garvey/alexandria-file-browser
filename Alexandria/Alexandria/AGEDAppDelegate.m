@@ -139,7 +139,29 @@
 	//deselects selected rows
 	[[[_selectedController tabViewItem] mainTableView] deselectAll:nil];
 	
+	//plays trash sound - only works OSX 10.7 and later because sound was in different directory before
+	[[[NSSound alloc] initWithContentsOfFile:@"/System/Library/Components/CoreAudio.component/Contents/SharedSupport/SystemSounds/dock/drag to trash.aif" byReference:YES] play];
+	
 	[self reloadCurrentTable];
+}
+
+-(void)copy:(id)sender
+{
+	NSMutableArray* selectedFileURLs = [NSMutableArray new];
+	//used so that text editors will have the file paths in pastboard for copying
+	__block NSString* selectedFilePaths = @"";
+	
+	[self mapSelectedRows:^(NSUInteger index, BOOL *stop){
+		AGEDFile* file =  [_selectedController selectedFile:index];
+		[selectedFileURLs addObject:[[NSURL alloc] initFileURLWithPath:[file fullFileName] isDirectory:NO]];
+		selectedFilePaths = [selectedFilePaths stringByAppendingString:[[file fullFileName] stringByAppendingString:@"\n"]];
+	}];
+	
+	NSPasteboard* pasteboard = [NSPasteboard generalPasteboard];
+	[pasteboard clearContents];
+	[pasteboard writeObjects:selectedFileURLs];
+	[pasteboard setString:selectedFilePaths forType:NSStringPboardType];
+	
 }
 
 -(NSArray*)selectedRows
@@ -253,63 +275,54 @@
 
 -(void)addFileCollectionsConcurrent
 {
+	//initializes all the tabs to blank tabs and adds a loading... title so something will be there until the tab loads
 	NSMutableArray* blankTabViewArray = [NSMutableArray new];
-	NSArray* titleArray = @[@"Books", @"Movies", @"Sheet Music", @"Internet"];
-	for (NSString* title in titleArray) {
+	int numberOfTabs = 4;
+	
+	for (int i=0; i<numberOfTabs; i++) {
 		AGEDTableViewController* blankController = [AGEDTableViewController new];
 		[_agedTableViewControllerArray addObject:blankController];
 		NSTabViewItem* blankTabView = [NSTabViewItem new];
-		[blankTabView setLabel:title];
+		[blankTabView setLabel:@"Loading..."];
 		[_topTabView addTabViewItem: blankTabView];
 		[blankTabViewArray addObject:blankTabView];
-		}
+	}
 	
-	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-		AGEDFileCollection* fileCollection = [AGEDAlexandriaTest bookFileCollection];
-		[_fileCollectionsArray addObject: fileCollection];
-		NSLog(@"%@", [fileCollection directories]);
+	//loads first tab on main thread and shows window when done, then loads each following tab in order on a separate thread
+	
+	AGEDFileCollection* fileCollection = [AGEDAlexandriaTest bookFileCollection];
+	
+	NSLog(@"%@", [fileCollection directories]);
+	
+
+	[_fileCollectionsArray addObject: fileCollection];
+	[self addTabToTabView:fileCollection indexPosition:0];
+	_selectedController = _agedTableViewControllerArray[0];
+	[_selectedController updateFileCountLabel];
+	[_topTabView selectTabViewItemAtIndex:0];
+	[_topTabView removeTabViewItem:[blankTabViewArray objectAtIndex:0]];
+	[_window setIsVisible:YES];
+	
 		
-		dispatch_async(dispatch_get_main_queue(), ^{
-			[self addTabToTabView:fileCollection indexPosition:0];
-			_selectedController = _agedTableViewControllerArray[0];
-			[_selectedController updateFileCountLabel];
-			[_topTabView selectTabViewItemAtIndex:0];
-			[_topTabView removeTabViewItem:[blankTabViewArray objectAtIndex:0]];
-			[_window setIsVisible:YES];
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+		AGEDAlexandriaTest* test = [AGEDAlexandriaTest new];
+		NSArray *fileCollectionSelectorNames = @[@"movieFileCollection", @"sheetMusicFileCollection", @"internetFileCollection"];
+		
+		int i = 1;
+		for (NSString *selectorName in fileCollectionSelectorNames) {
+			AGEDFileCollection* fileCollection = [test performSelector:NSSelectorFromString(selectorName)];
 			
-		});
-    });
-	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        AGEDFileCollection* fileCollection = [AGEDAlexandriaTest movieFileCollection];
-		[_fileCollectionsArray addObject: fileCollection];
-		
-		dispatch_async(dispatch_get_main_queue(), ^{
-			[self addTabToTabView:fileCollection indexPosition:1];
-			[_topTabView removeTabViewItem:[blankTabViewArray objectAtIndex:1]];
-		});
-    });
-	
-	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        AGEDFileCollection* fileCollection = [AGEDAlexandriaTest sheetMusicFileCollection];
-		[_fileCollectionsArray addObject: fileCollection];
-		
-		dispatch_async(dispatch_get_main_queue(), ^{
-			[self addTabToTabView:fileCollection indexPosition:2];
-			[_topTabView removeTabViewItem:[blankTabViewArray objectAtIndex:2]];
-		});
-		
-    });
-	 
-	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        AGEDFileCollection* fileCollection = [AGEDAlexandriaTest internetFileCollection];
-		[_fileCollectionsArray addObject: fileCollection];
-		
-		dispatch_async(dispatch_get_main_queue(), ^{
-			[self addTabToTabView:fileCollection indexPosition:3];
-			[_topTabView removeTabViewItem:[blankTabViewArray objectAtIndex:3]];
-		});
+			dispatch_sync(dispatch_get_main_queue(), ^{
+				[_fileCollectionsArray addObject: fileCollection];
+				[self addTabToTabView:fileCollection indexPosition:i];
+				[_topTabView removeTabViewItem:[blankTabViewArray objectAtIndex:i]];
+			});
+			i++;
+		}
     });
 	
 }
+
+
 
 @end

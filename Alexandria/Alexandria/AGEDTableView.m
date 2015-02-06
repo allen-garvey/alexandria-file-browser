@@ -24,6 +24,8 @@
         [self setAllowsMultipleSelection:YES];
 		[self setUsesAlternatingRowBackgroundColors:YES];
 		[self setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+		[self registerForDraggedTypes:[NSArray arrayWithObjects:NSFileContentsPboardType, nil]];
+		[self setDraggingSourceOperationMask:NSDragOperationCopy forLocal:NO];
     }
     return self;
 }
@@ -46,12 +48,18 @@
 -(void)keyDown:(NSEvent *)theEvent
 {
 	AGEDAppDelegate* app = [NSApp delegate];
-	int returnKeyCode = 36;
-	if ([theEvent keyCode] == returnKeyCode) {
+	int RETURN_KEY_CODE = 36;
+	if ([theEvent keyCode] == RETURN_KEY_CODE) {
 		[app openFileButtonPressed:self];
 	}
 
 	
 }
+
+
+
+
+
+
 
 @end

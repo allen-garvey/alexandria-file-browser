@@ -28,10 +28,10 @@
 		_mainTableView = [[NSTableView alloc] initWithFrame:_tableContainer.frame];
 		[_mainTableView setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
 		
-		NSArray* tableColumnsArray = @[@"filename", @"category", @"directory", @"date Created", @"file Size"];
-		NSDictionary* columnWidths = @{@"filenameColumn" : @(462), @"categoryColumn" : @(152), @"directoryColumn" : @(449), @"dateCreatedColumn" : @(169), @"fileSizeColumn" : @(70)};
+		NSArray* tableColumnsArray = @[@"filename", @"category", @"directory", @"extension", @"date Created", @"file Size"];
+		NSDictionary* columnWidths = @{@"filenameColumn" : @(462), @"categoryColumn" : @(152), @"directoryColumn" : @(449), @"extensionColumn" : @(70), @"dateCreatedColumn" : @(169), @"fileSizeColumn" : @(70)};
 		//		NSDictionary* columnDescriptors = @{@"categoryColumn" : @[[NSSortDescriptor sortDescriptorWithKey:@"category" ascending:YES], [NSSortDescriptor sortDescriptorWithKey:@"filename" ascending:YES]], @"filenameColumn" : @[[NSSortDescriptor sortDescriptorWithKey:@"filename" ascending:YES]], @"directoryColumn" : @[[NSSortDescriptor sortDescriptorWithKey:@"directory" ascending:YES], [NSSortDescriptor sortDescriptorWithKey:@"filename" ascending:YES]], @"dateCreatedColumn" : @[[NSSortDescriptor sortDescriptorWithKey:@"dateCreated" ascending:YES], [NSSortDescriptor sortDescriptorWithKey:@"filename" ascending:YES]], @"fileSizeColumn" : @[[NSSortDescriptor sortDescriptorWithKey:@"fileCreationDate" ascending:YES], [NSSortDescriptor sortDescriptorWithKey:@"filename" ascending:YES]]};
-		NSArray* tableColumnSortKeys = @[@"filename", @"category", @"directory", @"fileCreationDate", @"fileSize"];
+		NSArray* tableColumnSortKeys = @[@"filename", @"category", @"directory", @"extension", @"fileCreationDate", @"fileSize"];
 		
 		//		add sorting to columns
 		

@@ -20,11 +20,13 @@
 //have to use id because importing "AGEDTableViewController.h" breaks the build
 @property (weak, nonatomic) id<AGEDTableViewController> controller;
 
+
 @end
 
 @protocol AGEDTableViewController <NSObject>
 
 -(void)tableViewRightClickAction:(NSEvent*)theEvent;
 -(void)renameFilePanelAction:(AGEDFileRenamePanel*)sender;
+
 
 @end

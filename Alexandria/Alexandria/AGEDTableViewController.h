@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 //#import "AGEDFileTabViewItem2.h"
 #import "AGEDFileRenamePanel.h"
+#import "AGEDFile.h"
 
 @interface AGEDTableViewController : NSObject <NSTableViewDataSource, AGEDTableViewController>
 
@@ -55,6 +56,9 @@ typedef NS_ENUM(NSInteger, AGEDTableViewState) {
 
 -(void)trashSelectedFile:(NSUInteger)selectedRow;
 
+-(AGEDFile *)selectedFile:(NSUInteger)selectedRow;
+-(NSURL*)selectedFileURL:(NSUInteger)selectedRow;
+
 -(void)tableViewRightClickAction:(NSEvent*)theEvent;;
 
 -(void)capitalizeFileName:(NSUInteger)selectedRow;
@@ -64,6 +68,6 @@ typedef NS_ENUM(NSInteger, AGEDTableViewState) {
 -(void)displayRenameFilePanel:(NSUInteger)selectedRow;
 -(void)renameFilePanelAction:(AGEDFileRenamePanel*)sender;
 
-
+- (id <NSPasteboardWriting>)tableView:(NSTableView *)tableView pasteboardWriterForRow:(NSInteger)row NS_AVAILABLE_MAC(10_7);
 
 @end

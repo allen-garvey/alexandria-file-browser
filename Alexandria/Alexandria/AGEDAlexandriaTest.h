@@ -18,11 +18,13 @@
 +(void)testAddTab:(NSTabView*)topTabView;
 +(AGEDFileCollection*)fileCollectionFromDictionary2;
 +(AGEDFileCollection*)movieFileCollection;
+-(AGEDFileCollection*)movieFileCollection;
 +(AGEDFileCollection*)sheetMusicFileCollection;
 -(AGEDFileCollection*)sheetMusicFileCollection;
 +(AGEDFileCollection*)bookFileCollection;
 -(AGEDFileCollection*)bookFileCollection;
 +(AGEDFileCollection*)internetFileCollection;
+-(AGEDFileCollection*)internetFileCollection;
 +(void)fileContainsTest;
 +(void)duplicateFilesTest;
 +(void)moveFileToTrashTest;

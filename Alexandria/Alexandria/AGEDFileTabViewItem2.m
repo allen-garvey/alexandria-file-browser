@@ -67,6 +67,7 @@
 										   @{@"column name": @"filename", @"column width": @(462), @"column sort desciptor": [NSSortDescriptor sortDescriptorWithKey:@"filename" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]},
 										   @{@"column name": @"category", @"column width": @(152), @"column sort desciptor": [NSSortDescriptor sortDescriptorWithKey:@"category" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]},
 										   @{@"column name": @"directory", @"column width": @(449), @"column sort desciptor": [NSSortDescriptor sortDescriptorWithKey:@"directory" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]},
+										   @{@"column name": @"extension", @"column width": @(60), @"column sort desciptor": [NSSortDescriptor sortDescriptorWithKey:@"extension" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]},
 										   @{@"column name": @"date Created", @"column width": @(169), @"column sort desciptor": [NSSortDescriptor sortDescriptorWithKey:@"fileCreationDate" ascending:NO selector:@selector(compare:)]},
 										   @{@"column name": @"file Size", @"column width": @(70), @"column sort desciptor": [NSSortDescriptor sortDescriptorWithKey:@"fileSize" ascending:NO selector:@selector(compare:)]}
 										   ];

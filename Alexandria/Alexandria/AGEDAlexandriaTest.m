@@ -137,6 +137,7 @@
 	return fileCollection;
 }
 
+
 +(AGEDFileCollection*)movieFileCollection
 {
 	NSLog(@"start loading movies");
@@ -154,6 +155,25 @@
 	NSLog(@"finish loading %@", [fileCollection title]);
 	return fileCollection;
 }
+
+-(AGEDFileCollection*)movieFileCollection
+{
+	NSLog(@"start loading movies");
+	NSArray *movieDirList = NSSearchPathForDirectoriesInDomains(NSMoviesDirectory, NSUserDomainMask, YES);
+	NSString* movieDir = movieDirList[0];
+	
+	//	NSArray *downloadsDirList = NSSearchPathForDirectoriesInDomains(NSDownloadsDirectory, NSUserDomainMask, YES);
+	//	NSString* archiveDir = [downloadsDirList[0] stringByAppendingPathComponent:@"archive"];
+	
+	AGEDFileCollection* fileCollection = [AGEDFileCollection new];
+	[fileCollection genericSettings:AGEDDefaultMovieCollection];
+	//[fileCollection addFilesFromDirectories:@[movieDir, archiveDir]];
+	[fileCollection addFilesFromDirectories:@[movieDir]];
+	[fileCollection setTitle:@"Movies"];
+	NSLog(@"finish loading %@", [fileCollection title]);
+	return fileCollection;
+}
+
 
 +(AGEDFileCollection*)sheetMusicFileCollection
 {
@@ -186,6 +206,7 @@
 }
 
 
+
 +(AGEDFileCollection*)internetFileCollection
 {
 	NSLog(@"start loading internet");
@@ -199,6 +220,21 @@
 	NSLog(@"finish loading %@", [fileCollection title]);
 	return fileCollection;
 }
+
+-(AGEDFileCollection*)internetFileCollection
+{
+	NSLog(@"start loading internet");
+	NSArray *documentsFolders = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *internetDir =  [NSString stringWithFormat:@"%@/internet", documentsFolders[0]];
+	
+	AGEDFileCollection* fileCollection = [AGEDFileCollection new];
+	[fileCollection genericSettings:AGEDDefaultInternetCollection];
+	[fileCollection addFilesFromDirectories:@[internetDir]];
+	[fileCollection setTitle:@"Internet"];
+	NSLog(@"finish loading %@", [fileCollection title]);
+	return fileCollection;
+}
+
 
 +(void)fileContainsTest
 {

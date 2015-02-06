@@ -160,7 +160,7 @@
 
 -(BOOL)isDirectory:(NSString*)filename directory:(NSString*)directory
 {
-	NSFileManager *fmTemp = [NSFileManager defaultManager];
+	NSFileManager *fmTemp = [[NSFileManager alloc] init];
 	[fmTemp changeCurrentDirectoryPath:directory];
 	NSDictionary* fileInfo = [fmTemp attributesOfItemAtPath:filename error:nil];
 	if ([fileInfo[NSFileType]  isEqual: NSFileTypeDirectory]) {
@@ -172,7 +172,7 @@
 
 -(NSDictionary*)fileInfo:(NSString*)filename directory:(NSString*)directory
 {
-	NSFileManager *fmTemp = [NSFileManager defaultManager];
+	NSFileManager *fmTemp = [[NSFileManager alloc] init];
 	[fmTemp changeCurrentDirectoryPath:directory];
 	return [fmTemp attributesOfItemAtPath:filename error:nil];
 }
@@ -181,7 +181,7 @@
 {
 	@autoreleasepool {
 		
-		NSFileManager *fmTemp = [NSFileManager defaultManager];
+		NSFileManager *fmTemp = [[NSFileManager alloc] init];
 		if (![fmTemp changeCurrentDirectoryPath:directory]) {
 //				NSLog(@"%@ directory not found", directory);
 			return;
@@ -238,7 +238,7 @@
 	NSArray* genericSupportedFileExtensions;
 	NSArray* genericCategorySorterRegExPatterns;
 	
-	NSArray* genericBookSupportedFileExtensions = @[@"mobi", @"pdf", @"cbr", @"epub"];
+	NSArray* genericBookSupportedFileExtensions = @[@"mobi", @"epub", @"pdf", @"cbr"];
 	/*
 	NSArray* genericBookCategorySorterRegExPatterns = @[
 														@"Fitness",					@"bodybuild|muscle|fitness|excercise|diet|strength|conditioning|ball|stretch|pavel|chef|\\bbody\\b|\\bfood[s]?\\b|\\beat\\b",
@@ -302,15 +302,18 @@
 														@"Biography",					@"biography",
 														@"Pickup",					@"women|red.pill|sex|roosh|charisma|attract|deangelo",
 														@"Python",					@"python|django",
-														@"Java",						@"java |j2ee",
+														@"Java",						@"java[^0-9a-z.]|java$|j2ee",
 														@"Haskell",						@"haskell",
 														@"Lisp",						@"lisp|schemer",
 														@"Objective-C",				@"objective.c|ios[0-9]*|cocoa|coremidi|xcode|osx|swift",
 														@"C",							@"[^0-9a-z.]c[^0-9a-z.]|^c[^0-9a-z.]|[^0-9a-z.]c$",
-														@"Web Design",				@"html|css|javascript|php|rails|jquery|web|cold.fusion",
+														@"PHP",						@"php|codeigniter",
+														@"Javascript",				@"javascript|js|angular|jquery",
+														@"Ruby",					@"ruby|rails",
+														@"Web Design",				@"html|css|web|cold.fusion",
 														@"Databases",					@"database|sql",
 														@"Operating Systems",			@"operating.system[s]?",
-														@"Software Engineering",		@"software.engineering|software",
+														@"Software Engineering",		@"software.engineering|software|refactor",
 														@"Pyschology",				@"pyschology|anxiety",
 														@"Science",					@"physics|chemistry|experiment|[^computer ]science|feynman",
 														@"Self-Improvement",			@"self.improve|wisdom|mastery",
@@ -320,6 +323,7 @@
 														@"Spirituality",				@"spirituality|\\bgod\\b|[^0-9a-z]god[^0-9a-z]|^god[^0-9a-z]",
 														@"Computer Programming",		@"program|computer|algorithm|regular.expression",
 														@"College",					@"college|ncc|textbook|course",
+														@"Non-fiction",				@"reference|manual|primer|non.fiction"
 														];
 	
 	

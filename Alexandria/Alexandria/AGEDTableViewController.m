@@ -70,6 +70,9 @@
 	else if ([[tableColumn identifier] isEqualToString:@"dateCreatedColumn"]){
 		return [file fileCreationDateString];
 	}
+	else if ([[tableColumn identifier] isEqualToString:@"extensionColumn"]){
+		return [file extension];
+	}
 	else{
 		return [file directory];
 	}
@@ -210,12 +213,7 @@
 
 -(void)trashSelectedFile:(NSUInteger)selectedRow
 {
-//	NSInteger selectedRow = [[_tabViewItem mainTableView]selectedRow];
-//	if (selectedRow < 0) {
-//		return;
-//	}
-	AGEDFile* selectedFile = [_fileArrayDisplay objectAtIndex:selectedRow];
-	NSURL* selectedFileURL = [[NSURL alloc] initFileURLWithPath:[selectedFile fullFileName] isDirectory:NO];
+	NSURL* selectedFileURL = [self selectedFileURL:selectedRow];
 	NSFileManager* fm = [NSFileManager defaultManager];
 	
 	NSError* error;
@@ -224,6 +222,18 @@
 	if (error) {
 		NSLog(@"%@", error);
 	}
+}
+
+#pragma mark - File Selection Utility Methods
+
+-(AGEDFile *)selectedFile:(NSUInteger)selectedRow{
+	return [_fileArrayDisplay objectAtIndex:selectedRow];
+}
+
+-(NSURL*)selectedFileURL:(NSUInteger)selectedRow
+{
+	AGEDFile* selectedFile = [self selectedFile:selectedRow];
+	return [[NSURL alloc] initFileURLWithPath:[selectedFile fullFileName] isDirectory:NO];
 }
 
 #pragma mark file rename panel methods
@@ -326,9 +336,20 @@
 		NSString* editedFileName = [[NSString stringWithFormat:@"%@", newFileName] stringByAppendingPathExtension:[fileName pathExtension]];
 		return editedFileName;
 	}];
-
-	[[NSApp delegate] reloadCurrentTable];
+	//can't use just NSApp delegate because does'nt respond to selector in new version of xcode for some reason
+	AGEDAppDelegate* appDelegate = [NSApp delegate];
+	[appDelegate reloadCurrentTable];
 }
+
+#pragma mark - NSTableViewDataSource methods Drag and Drop
+
+- (id <NSPasteboardWriting>)tableView:(NSTableView *)tableView pasteboardWriterForRow:(NSInteger)row NS_AVAILABLE_MAC(10_7)
+{
+	NSURL *selectedURL = [self selectedFileURL:row];
+	
+	return selectedURL;
+}
+
 
 
 @end

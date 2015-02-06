@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString* category;
 @property (strong, nonatomic) NSDictionary* fileInfo;
 @property (strong, nonatomic, readonly) NSString* title;
+@property (strong, nonatomic, readonly) NSString* extension;
 
 -(void)openInDefaultApplication;
 -(void)openInFinder;
