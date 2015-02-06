@@ -45,7 +45,7 @@
 -(BOOL)isStringMatchCaseInsensitive:(NSString*)haystack regExPattern:(NSString*)regExPattern
 {
 	[self setRegExPattern:regExPattern];
-	if ([[_regExMatcher matchesInString:haystack options:0 range:NSMakeRange(0, [haystack length])] count] > 0 ){
+	if ([self isStringMatchCaseInsensitive:haystack]){
 		return true;
 	}
 	
